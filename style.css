@@ -1,0 +1,287 @@
+    @import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
+    @import url(https://fonts.googleapis.com/css?family=Overpass:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+    @import url(https://fonts.googleapis.com/css?family=Goldman:regular,700);
+
+    html::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    html::-webkit-scrollbar-track {
+        -webkit-box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.2) inset;
+        background-color: #f9f9fd;
+    }
+
+    html::-webkit-scrollbar-thumb {
+        background-color: #f2bf93;
+        background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, .25) 25%,
+                transparent 25%,
+                transparent 50%,
+                rgba(255, 255, 255, .25) 50%,
+                rgba(255, 255, 255, .25) 75%,
+                transparent 75%,
+                transparent);
+    }
+
+    dialog::-webkit-scrollbar {
+        width: 0;
+    }
+
+    textarea::-webkit-scrollbar {
+        width: 0;
+    }
+
+    #lecturesTable {
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 3.0s ease-in-out, visibility 0s 5s; /* Плавное изменение opacity и задержка для visibility */
+    }
+
+    #lecturesTable.show {
+        visibility: visible;
+        opacity: 1;
+        transition: opacity 3.0s ease-in-out; /* Только плавное изменение opacity */
+    }
+
+    .student-photo {
+        width: 200px; 
+        height: 200px;
+        margin: 20px auto; /* Центрируем фото */
+        overflow: hidden; /* Избегаем выхода частей изображения */
+        border-radius: 50%; /* Круглая форма */
+        transition: transform 0.8s ease-in-out; /* Плавное вращение */
+        transform-origin: center center; /* Точка вращения — центр фото */
+    }
+    
+    .student-photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Масштабирование без искажений */
+        border-radius: 50%; /* Округляем изображение */
+        display: block; /* Убираем лишние пробелы вокруг inline-элементов */
+    }
+    
+    .student-photo:hover {
+        transform: rotate(360deg); /* Вращение при наведении */
+    }
+
+    /* Анимация для увеличения заголовка */
+    h1 {
+        transition: transform 0.3s ease; /* Плавное изменение размера */
+        font-size: 2em;
+        font-weight: bold;
+        background: linear-gradient(90deg, #ff00cc, #3333ff, #00ffcc);
+        background-size: 300%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: shimmer 3s infinite;
+    }
+
+    h1:hover {
+        transform: scale(1.035); /* Увеличение заголовка на 20% при наведении */
+        font-size: 2em;
+        font-weight: bold;
+        background: linear-gradient(90deg, #ff00cc, #3333ff, #00ffcc);
+        background-size: 300%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: shimmer 3s infinite;
+    }
+
+    p {
+        transition: background-color 0.3s ease; 
+    }
+
+    p:active {
+        background-color: rgb(230, 173, 173); 
+    }
+
+    body {
+        background-color: antiquewhite;
+        font-family: 'Overpass', sans-serif;
+        font-size: 18px;
+        font-weight: normal;
+        text-align: initial;
+        padding-left: 20px;
+        padding-top: 10px;
+        letter-spacing: 2px;
+    }
+
+    .uslugi_bg {
+        background-color: peachpuff;
+    }
+
+    main {
+
+        margin: 20px;
+        padding: 20px;
+    }
+
+    .product-card {
+        display: grid;
+        place-items: center;
+
+        background-color: #fdcfa6;
+        border: 1px solid #ccc;
+        padding: 20px;
+        transition: 0.6s;
+        position: relative;
+        /* Для абсолютного позиционирования вложенного элемента */
+    }
+
+    .grid-container {
+        display: grid;
+        /* Grid Layout */
+        justify-content: space-between;
+        grid-template-columns: repeat(3, 1fr);
+        /* 3 колонки */
+        grid-template-rows: repeat(2, auto);
+        /* 2 строки */
+
+        gap: 10px;
+        /* Промежуток между элементами */
+        padding: 20px;
+
+
+    }
+
+    .baku {
+        border-right: black solid 1px;
+        padding-right: 10px;
+    }
+
+    .black {
+        display: flex;
+        justify-content: space-between;
+        padding: 5px;
+        margin: 5px;
+        line-height: 0.8;
+        text-align: center;
+    }
+
+    .stroka {
+        display: flex;
+        justify-content: space-around;
+        padding: 20px;
+        border-bottom: black solid 1px;
+        border-top: black solid 1px;
+    }
+
+    .img {
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+    }
+
+    .img2 {
+        height: auto;
+        width: 1em;
+    }
+
+    .pipka {
+        display: flex;
+
+    }
+
+    .photochki {
+        transition: all 0.6s;
+    }
+
+    .product-card:hover {
+        background-color: #fdcff8;
+    }
+
+    .okno {
+        background-color: rgb(94, 192, 159);
+        border-radius: 5%;
+        border: none;
+    }
+
+    input {
+        padding: 8px;
+        background-color: rgb(193, 193, 193);
+        color: rgb(0, 0, 128);
+        font-weight: 700;
+        border-radius: 20px;
+        border-color: aqua;
+
+    }
+
+    textarea {
+        background-color: rgb(193, 193, 193);
+        color: rgb(0, 0, 128);
+        font-weight: 700;
+        border-radius: 10px;
+        border-color: aqua;
+    }
+
+    select {
+        background-color: rgb(193, 193, 193);
+        color: rgb(0, 0, 128);
+        font-weight: 700;
+        border-radius: 10px;
+        border-color: aqua;
+    }
+
+    /* option{
+                color: black;
+                background:whitesmoke;
+            } */
+    .submit {
+        text-transform: uppercase;
+        background-color: rgb(240, 238, 238);
+    }
+
+    button {
+        padding: 10px 10px;
+        margin-top: 10px;
+        border: none;
+        background: rgba(40, 140, 160);
+        color: white;
+        text-transform: uppercase;
+        cursor: pointer;
+        border-radius: 52px;
+        outline: none;
+
+    }
+
+    .btn {
+        transition: all 0.3s;
+    }
+
+    .btn:hover {
+        color: #f2bf93;
+    }
+
+    /* .niz{
+
+            } */
+    a {
+        color: rgb(40, 180, 170);
+        transition: all 0.3s;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: rgb(0, 0, 0);
+        font-size: 20px;
+
+    }
+
+    a:active {
+        color: blueviolet;
+    }
+
+    /* a:visited{
+                color: blue;
+            } */
+    h2 {
+        text-align: center;
+        font-size: 32px;
+    }
+
+    footer {
+        display: grid;
+        justify-content: center;
+        border-top: solid black 1px;
+
+    }

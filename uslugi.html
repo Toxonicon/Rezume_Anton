@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="special/style.css">
+    <title>Услуги</title>
+</head>
+
+<body class="uslugi_bg ">
+    <header>
+        <div class="black">
+            <div>
+                <img src="foto/logo.jpg" alt="52" class="img">
+            </div>
+            <div>
+                <p>Группа ЭФБО-04-23</p>
+                <p>Мальцов-Лукьяненко Антон</p>
+            </div>
+
+        </div>
+
+        <div class="stroka">
+            <a href="index.html">Главная</a>
+            <a href="First_semestr.html">Первый семестр</a>
+            <a href="Second_semestr.html">Второй семестр</a>
+            <a style="font-weight: 700;" href="#">Услуги</a>
+            <a href="#">Авторизация</a>
+        </div>
+
+    </header>
+
+    <body>
+        <div class="pipka">
+            <div class="baku">
+                <aside>
+                    <span>
+                        <p>Навигация по странице</p>
+                    </span>
+                    <div>
+                        <a href="#ссылка 1">Фронтенд</a>
+                    </div>
+                    <div>
+                        <a href="#ссылка 2">Бэкенд</a>
+                    </div>
+
+
+                </aside>
+            </div>
+
+            <main>
+                <div class="container">
+                    <h2>
+                        Разработка Веб-Приложений
+                    </h2>
+                    <div class="grid-container">
+                        <div class="product-card">
+
+                            <img src="foto/zakaz.jpg" alt="52" class="img">
+                            <span>
+                                Сайт-Визитка
+                            </span>
+
+                            <button class="btn" type="button" onclick="window.myDialog.showModal()">
+                                Заказать
+                            </button>
+                            <dialog id="myDialog" style="height: 500px; width: 400px;" class="okno">
+                                <button type="button" onclick="window.myDialog.close()">
+                                    Закрыть
+                                </button>
+                                <h2>Форма обратной связи</h2>
+                                <form id="contactForm" action="user" method="post" onsubmit="handleSubmit(event)">
+                                    <div style="display: flex; flex-direction: column; margin-left: 15px;">
+                                        <!-- Поле для ввода имени -->
+                                        <label for="name" style="margin-bottom: 15px;">Имя:</label>
+                                        <input type="text" id="name" name="name" required style="margin-bottom: 15px; "
+                                            placeholder="Введите свое имя">
+                                        <!-- Поле для ввода фамилии -->
+                                        <label for="surname" style="margin-bottom: 15px;">Фамилия:</label>
+                                        <input type="text" id="surname" name="surname" required
+                                            style="margin-bottom: 15px;" placeholder="Введите свою фамилию">
+                                        <!-- Поле для ввода электронной почты -->
+                                        <label for="email" style="margin-bottom: 15px;">Электронная почта:</label>
+                                        <input type="email" id="email" name="email" required
+                                            style="margin-bottom: 15px;" placeholder="example@mail.com">
+                                        <label for="country " style="margin-bottom: 15px;">Выберите страну:</label>
+                                        <select id="country" name="country" onchange="updatePhoneCode()" required>
+                                            <option value="">-- Выберите страну --</option>
+                                            <option value="+1">США (+1)</option>
+                                            <option value="+44">Великобритания (+44)</option>
+                                            <option value="+7">Россия (+7)</option>
+                                            <option value="+49">Германия (+49)</option>
+                                            <option value="+33">Франция (+33)</option>
+                                            <!-- Можно добавить больше стран -->
+                                        </select> <br><br>
+                                        <label for="phone" style="margin-bottom: 15px;">Номер телефона:</label>
+                                        <input type="tel" id="phone" name="phone" placeholder="Введите номер телефона"
+                                            required style="margin-bottom: 15px;">
+                                        <label for="date">Выберите дату:</label>
+                                        <input type="date" id="date" name="date" required><br><br>
+                                        <!-- Многострочное текстовое поле для комментариев -->
+                                        <label for="comments" style="margin-bottom: 15px;">Комментарии:</label>
+                                        <textarea id="comments" name="comments"
+                                            style="margin-bottom: 15px; resize: none; height: 150px; width: 300px;"
+                                            placeholder="Напишите комментарий"></textarea>
+                                    </div>
+                                    <!-- Кнопка отправки формы -->
+                                    <input type="checkbox" id="popd" onclick="check();" value="" autocomplete="off" />
+                                    Даю согласие на обработку персональных данных
+                                    <br><br>
+                                    <input type="submit" name="submit" class="submit" disabled="" value="Отправить" />
+                                </form>
+                            </dialog>
+
+
+                        </div>
+                        <div class="product-card">
+                            <img src="foto/zakaz.jpg" alt="52" class="img">
+                            <span>
+
+                                Сайт-Визитка
+                            </span>
+                            <button class="btn" type="button" onclick="window.myDialog2.showModal()">
+                                Заказать
+                            </button>
+                            <dialog id="myDialog2" style="height: 500px; width: 400px;" class="okno">
+                                <button type="button" onclick="window.myDialog2.close()">
+                                    Закрыть
+                                </button>
+                                <h2>Форма обратной связи</h2>
+                                <form id="contactForm2" onsubmit="handleSubmit(event)">
+                                    <div style="display: flex; flex-direction: column; margin-left: 15px;">
+                                        <!-- Поле для ввода имени -->
+                                        <label for="name" style="margin-bottom: 15px;">Имя:</label>
+                                        <input type="text" id="name" name="name" required style="margin-bottom: 15px;"
+                                            placeholder="Введите свое имя">
+                                        <!-- Поле для ввода фамилии -->
+                                        <label for="surname" style="margin-bottom: 15px;">Фамилия:</label>
+                                        <input type="text" id="surname" name="surname" required
+                                            style="margin-bottom: 15px;" placeholder="Введите свою фамилию">
+                                        <!-- Поле для ввода электронной почты -->
+                                        <label for="email" style="margin-bottom: 15px;">Электронная почта:</label>
+                                        <input type="email" id="email" name="email" required
+                                            style="margin-bottom: 15px;" placeholder="example@mail.com">
+                                        <label for="country " style="margin-bottom: 15px;">Выберите страну:</label>
+                                        <select id="country2" name="country" onchange="updatePhoneCode()" required>
+                                            <option value="">-- Выберите страну --</option>
+                                            <option value="+1">США (+1)</option>
+                                            <option value="+44">Великобритания (+44)</option>
+                                            <option value="+7">Россия (+7)</option>
+                                            <option value="+49">Германия (+49)</option>
+                                            <option value="+33">Франция (+33)</option>
+                                            <!-- Можно добавить больше стран -->
+                                        </select> <br><br>
+                                        <label for="phone" style="margin-bottom: 15px;">Номер телефона:</label>
+                                        <input type="tel" id="phone2" name="phone" placeholder="Введите номер телефона"
+                                            required style="margin-bottom: 15px;">
+                                        <label for="date">Выберите дату:</label>
+                                        <input type="date" id="date" name="date" required><br><br>
+                                        <!-- Многострочное текстовое поле для комментариев -->
+                                        <label for="comments" style="margin-bottom: 15px;">Комментарии:</label>
+                                        <textarea id="comments" name="comments"
+                                            style="margin-bottom: 15px; resize: none; height: 150px; width: 300px;"
+                                            placeholder="Напишите комментарий"></textarea>
+                                    </div>
+                                    <!-- Кнопка отправки формы -->
+                                    <input type="checkbox" id="popd2" onclick="check();" value="" autocomplete="off" />
+                                    Даю согласие на обработку персональных данных
+                                    <br><br>
+                                    <input type="submit" name="submit2" class="submit" disabled="" value="Отправить" />
+                                </form>
+                            </dialog>
+
+
+
+                        </div>
+                        <div class="product-card">
+
+                            <img src="foto/zakaz.jpg" alt="52" class="img">
+                            <span>
+                                Заказать
+                            </span>
+
+
+                            <button class="btn" type="button" onclick="window.myDialog2.showModal()">
+                                <div style="width: 100%; text-align: center; ">Сайт-визитка</div>
+                            </button>
+                            <dialog id="myDialog3" style="height: 500px; width: 400px;" class="okno">
+                                <button type="button" onclick="window.myDialog2.close()">
+                                    Закрыть
+                                </button>
+                                <h2>Форма обратной связи</h2>
+                                <form id="contactForm3" onsubmit="handleSubmit(event)">
+                                    <div style="display: flex; flex-direction: column; margin-left: 15px;">
+                                        <!-- Поле для ввода имени -->
+                                        <label for="name" style="margin-bottom: 15px;">Имя:</label>
+                                        <input type="text" id="name" name="name" required style="margin-bottom: 15px; "
+                                            placeholder="Введите свое имя">
+                                        <!-- Поле для ввода фамилии -->
+                                        <label for="surname" style="margin-bottom: 15px;">Фамилия:</label>
+                                        <input type="text" id="surname" name="surname" required
+                                            style="margin-bottom: 15px;" placeholder="Введите свою фамилию">
+                                        <!-- Поле для ввода электронной почты -->
+                                        <label for="email" style="margin-bottom: 15px;">Электронная почта:</label>
+                                        <input type="email" id="email" name="email" required
+                                            style="margin-bottom: 15px;" placeholder="example@mail.com">
+                                        <label for="country " style="margin-bottom: 15px;">Выберите страну:</label>
+                                        <select id="country3" name="country" onchange="updatePhoneCode()" required>
+                                            <option value="">-- Выберите страну --</option>
+                                            <option value="+1">США (+1)</option>
+                                            <option value="+44">Великобритания (+44)</option>
+                                            <option value="+7">Россия (+7)</option>
+                                            <option value="+49">Германия (+49)</option>
+                                            <option value="+33">Франция (+33)</option>
+                                            <!-- Можно добавить больше стран -->
+                                        </select> <br><br>
+                                        <label for="phone" style="margin-bottom: 15px;">Номер телефона:</label>
+                                        <input type="tel" id="phone3" name="phone" placeholder="Введите номер телефона"
+                                            required style="margin-bottom: 15px;">
+                                        <label for="date">Выберите дату:</label>
+                                        <input type="date" id="date" name="date" required><br><br>
+                                        <!-- Многострочное текстовое поле для комментариев -->
+                                        <label for="comments" style="margin-bottom: 15px;">Комментарии:</label>
+                                        <textarea id="comments" name="comments"
+                                            style="margin-bottom: 15px; resize: none; height: 150px; width: 300px;"
+                                            placeholder="Напишите комментарий"></textarea>
+                                    </div>
+                                    <!-- Кнопка отправки формы -->
+                                    <input type="checkbox" id="popd3" onclick="check();" value="" autocomplete="off" />
+                                    Даю согласие на обработку персональных данных
+                                    <br><br>
+                                    <input type="submit" name="submit3" class="submit" disabled="" value="Отправить" />
+                                </form>
+                        </div>
+
+
+                    </div>
+                    <div class="text">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla, consectetur facilis sint illum
+                        magnam enim quaerat? Ex, numquam vero. Expedita corrupti reprehenderit at suscipit ipsum
+                        molestiae modi dolorem, beatae, atque fugiat asperiores consequatur, doloribus enim ratione amet
+                        rem. Esse minus deleniti, veniam libero molestiae enim provident impedit fuga magnam dolorem
+                        repudiandae architecto corrupti qui porro cumque quam quidem, obcaecati saepe repellendus
+                        voluptatum quo consequuntur! Hic velit accusamus, consectetur facilis unde voluptates, adipisci
+                        pariatur, aspernatur ipsa aut distinctio. Quasi et dolores quis quam quo a, quibusdam voluptates
+                        perspiciatis neque distinctio ipsa odit corrupti minima asperiores! Minus unde voluptatum
+                        accusamus libero optio.
+                    </div>
+                </div>
+            </main>
+        </div>
+
+    </body>
+    <footer>
+        <div class="niz">
+            <p> &copy Мальцов-Лукьяненко Антон Васильевич, 2024
+                <a href="https://t.me/Levka_flower" target="_blank"><img src="foto/telega.png" alt="52"
+                        class="img2"></a>
+            </p>
+        </div>
+
+    </footer>
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault();
+            alert("Форма успешно отправлена!");
+            document.getElementById('contactForm').reset();
+            document.getElementById('contactForm2').reset();
+            document.getElementById('contactForm3').reset();
+        }
+        function updatePhoneCode() {
+            const countrySelect = document.getElementById('country');
+            const phoneInput = document.getElementById('phone');
+            const country2Select = document.getElementById('country2');
+            const phone2Input = document.getElementById('phone2');
+            const country3Select = document.getElementById('country3');
+            const phone3Input = document.getElementById('phone3');
+            const countryCode = countrySelect.value;
+            const country2Code = country2Select.value;
+            const country3Code = country3Select.value;
+            phoneInput.value = countryCode;
+            phone2Input.value = country2Code;
+            phone3Input.value = country3Code;
+        }
+        function check() {
+            var submit = document.getElementsByName('submit')[0];
+            var submit2 = document.getElementsByName('submit2')[0];
+            var submit3 = document.getElementsByName('submit3')[0];
+            if (document.getElementById('popd').checked || document.getElementById('popd2').checked || document.getElementById('popd3').checked) {
+                submit.disabled = '';
+                submit2.disabled = '';
+                submit3.disabled = '';
+            }
+            else {
+                submit.disabled = 'disabled';
+                submit2.disabled = 'disabled';
+                submit3.disabled = 'disabled';
+            }
+        }
+    </script>
+
+
+</body>
+
+
+</html>
