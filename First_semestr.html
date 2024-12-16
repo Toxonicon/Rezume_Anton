@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="special/style.css">
+  <title>Первый семестр</title>
+  <style>
+    .checkboxGafur {
+      display: flex;
+      justify-content: end;
+
+    }
+  </style>
+</head>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const secondSemesterPractices = [
+      "Базовое бэкенд-приложение",
+      "HTTP-запросы",
+      "JSON и работа с ним",
+      "HTTP-ответы",
+      "Проектирование API",
+      "Роутинг и его настройка",
+      "NoSQL базы данных",
+      "Обеспечение авторизации и доступа пользователей",
+      "Работа сторонних сервисов уведомления и авторизации",
+      "Основы ReactJS",
+      "Работа с компонентами динамической DOM",
+      "Использование хуков в React",
+      "Основы микросервисной архитектуры",
+      "Разработка классических модулей веб-приложений",
+      "Разработка классических модулей веб-приложений"
+    ];
+
+    const changePracticesContent = () => {
+      const practicesTableBody = document.querySelector("#practicesTable tbody");
+      if (practicesTableBody) {
+        practicesTableBody.innerHTML = "";
+
+        secondSemesterPractices.forEach((practice, index) => {
+          const row = document.createElement("tr");
+          row.innerHTML = `
+                    <td>${index + 1}</td>
+                    <td>${practice}</td>
+                    <td><input type="checkbox" /></td>
+                    <td><input type="checkbox" /></td>
+                `;
+          practicesTableBody.appendChild(row);
+        });
+      }
+    };
+    const button = document.getElementById("Smena");
+    if (button) {
+      button.onclick = changePracticesContent;
+    }
+  });
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const showLecturesButton = document.getElementById("showLectures");
+    const lecturesTable = document.getElementById("lecturesTable");
+
+    showLecturesButton.addEventListener("click", function () {
+      if (lecturesTable.classList.contains("show")) {
+        lecturesTable.classList.remove("show");
+      } else {
+        lecturesTable.classList.add("show");
+      }
+    });
+  });
+
+</script>
+
+<body>
+  <header>
+    <div class="black">
+      <div>
+        <img src="foto/logo.jpg" alt="52" class="img">
+      </div>
+      <div>
+        <p>Группа ЭФБО-04-23</p>
+        <p>Мальцов-Лукьяненко Антон</p>
+      </div>
+    </div>
+
+    <div class="stroka">
+      <a href="index.html">Главная</a>
+      <a style="font-weight: 700;" href="First_semestr.html">Первый семестр</a>
+      <a href="Second_semestr.html">Второй семестр</a>
+      <a href="uslugi.html">Услуги</a>
+      <a href="#">Авторизация</a>
+    </div>
+  </header>
+
+  <body>
+    <div class="pipka">
+      <aside class="baku">
+        <div>
+          <p>Навигация по странице</p>
+          <a href="#front">Фронтенд</a>
+          <br>
+          <a href="#back-end">Бэкенд</a>
+        </div>
+      </aside>
+
+
+
+      <main style="width: 100%;">
+        <div class="container">
+          <h3>Первый семестр</h3>
+          <h1 id="Leksi">Лекции</h1>
+          <button id="showLectures" class="button">Показать лекции</button>
+          <div class="table" id="lecturesTable">
+            <table>
+              <thead>
+                <tr>
+                  <th>Номер</th>
+                  <th>Тема</th>
+                  <th>Посещение</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Основы языка Html</td>
+                  <td><input type="checkbox" id="popd" value="" autocomplete="off" /></td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Углубленное изучение Html</td>
+                  <td><input type="checkbox" id="popd" value="" autocomplete="off" /></td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Основы работы Css</td>
+                  <td><input type="checkbox" id="popd" value="" autocomplete="off" /></td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>Адаптивная верстка Flexbox и Grid Layout</td>
+                  <td><input type="checkbox" id="popd" value="" autocomplete="off" /></td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>Bootstrap - работа с фреймворком</td>
+                  <td><input type="checkbox" id="popd" value="" autocomplete="off" /></td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td>Основы языка Javascript</td>
+                  <td><input type="checkbox" id="popd" value="" autocomplete="off" /></td>
+                </tr>
+                <tr>
+                  <td>7</td>
+                  <td>Работа с DOM и событиями в Javascript</td>
+                  <td><input type="checkbox" id="popd" value="" autocomplete="off" /></td>
+                </tr>
+                <tr>
+                  <td>8</td>
+                  <td>Введение в Github и Github Pages</td>
+                  <td><input type="checkbox" id="popd" value="" autocomplete="off" /></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <br>
+
+          <div>
+            <p>Практики</p>
+            <table style="border: 3px solid rgb(0, 0, 0); background-color: rgb(242, 159, 150);">
+              <tbody>
+                <tr>
+                  <td>Номер</td>
+                  <td>Тема</td>
+                  <td>Посещение</td>
+                  <td>
+                    Выполнение
+                  </td>
+                </tr>
+                <tr>
+                  <h1 id="Prak">Практики</h1>
+                  <table id="practicesTable" style=" background-color: rgb(242, 159, 150);" class="table">
+                    <thead>
+                      <tr>
+                        <th>Номер</th>
+                        <th>Тема</th>
+                        <th>Посещение</th>
+                        <th>Выполнение</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>Основы языка Html</td>
+                        <td><input type="checkbox" id="popd" value="" autocomplete="off" /></td>
+                        <td><input type="checkbox" id="popd" value="" autocomplete="off" /></td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>Углубленное изучение Html</td>
+                        <td><input type="checkbox" id="popd" value="" autocomplete="off" /></td>
+                        <td><input type="checkbox" id="popd" value="" autocomplete="off" /></td>
+                      </tr>
+                      <tr>
+                        <td>3</td>
+                        <td>Основы работы Css</td>
+                        <td><input type="checkbox" id="popd" value="" autocomplete="off" /></td>
+                        <td><input type="checkbox" id="popd" value="" autocomplete="off" /></td>
+                      </tr>
+                      <tr>
+                        <td>4</td>
+                        <td>Адаптивная верстка Flexbox и Grid Layout</td>
+                        <td><input type="checkbox" id="popd" value="" autocomplete="off" /></td>
+                        <td><input type="checkbox" id="popd" value="" autocomplete="off" /></td>
+                      </tr>
+                      <tr>
+                        <td>5</td>
+                        <td>Bootstrap - работа с фреймворком</td>
+                        <td><input type="checkbox" id="popd" value="" autocomplete="off" /></td>
+                        <td><input type="checkbox" id="popd" value="" autocomplete="off" /></td>
+                      </tr>
+                      <tr>
+                        <td>6</td>
+                        <td>Основы языка Javascript</td>
+                        <td><input type="checkbox" id="popd" value="" autocomplete="off" /></td>
+                        <td><input type="checkbox" id="popd" value="" autocomplete="off" /></td>
+                      </tr>
+                      <tr>
+                        <td>7</td>
+                        <td>Работа с DOM и событиями в Javascript</td>
+                        <td><input type="checkbox" id="popd" value="" autocomplete="off" /></td>
+                        <td><input type="checkbox" id="popd" value="" autocomplete="off" /></td>
+                      </tr>
+                      <tr>
+                        <td>8</td>
+                        <td>Введение в Github и Github Pages</td>
+                        <td><input type="checkbox" id="popd" value="" autocomplete="off" /></td>
+                        <td><input type="checkbox" id="popd" value="" autocomplete="off" /></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <button id="Smena" class="button">Посмотреть практики второго семестра</button>
+          </div>
+
+          <div class="student-photo" style="float:right;" ></div>
+
+          <div>
+            <p>Занятия проходят по адресу <a
+                href="https://yandex.ru/map-widget/v1/?um=constructor%3Afe9a869ead150018d91c7178566a3cf6ee021b32cbfa24c2f987bd7064bb902a&amp;source=constructor"
+                target="_blank">Проспект Вернадского 78</a></p>
+            <iframe
+              src="https://yandex.ru/map-widget/v1/?um=constructor%3Afe9a869ead150018d91c7178566a3cf6ee021b32cbfa24c2f987bd7064bb902a&amp;source=constructor"
+              width="100%" height="471" frameborder="0"></iframe>
+          </div>
+<p id="formMessage">Форма отправлена!</p>
+
+          <ul>
+            <br>
+          </ul>
+          <div>
+            <object data="WWW_mirea.pdf" type="application/pdf" width="100%" height="700"></object>
+          </div>
+      </main>
+  </body>
+  </div>
+
+  <footer>
+    <div>
+      <p> &copy Мальцов-Лукьяненко Антон Васильевич, 2024 <a href="https://t.me/toxonicon" target="_blank"><img
+            src="foto/telega.png" alt="52" class="img2"></a></p>
+
+    </div>
+  </footer>
+
+</body>
+
+</html>
